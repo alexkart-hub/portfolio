@@ -8,9 +8,7 @@
 	<script src="https://cdn.tiny.cloud/1/hwmf6iiynv2w4nam41o9zul5zg53ajnf8t8a1c66k68fx3xx/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 	<title><?= $title; ?></title>
 	<script>
-		tinymce.init({
-			selector: '#mytextarea'
-		});
+		<? include $_SERVER['DOCUMENT_ROOT']."/components/tiny/config/editor_config.js";?>
 	</script>
 </head>
 

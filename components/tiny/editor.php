@@ -1,3 +1,3 @@
 <form method="post">
-	<textarea id="mytextarea">Hello, World!</textarea>
+	<div class="tinyeditor" style="border:1px solid #ccc; width: 80%; height: 400px; margin-left:10%;"></div>
 </form>
