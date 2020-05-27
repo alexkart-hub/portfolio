@@ -24,6 +24,9 @@ class Controller_Admin extends Controller
 		if (!empty($_COOKIE['admin']) && ($_COOKIE['admin'] == $user['password'])) {
 			$data = $this->model->getData();
 			$data['title'] = "Админка - главная";
+			if (!empty($_POST)) {
+				$data += $_POST;
+			}
 			$this->view->generate("admin_main_view.php", "template_view.php", $data);
 		} else {
 			header("Location: auth");

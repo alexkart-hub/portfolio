@@ -2,7 +2,7 @@ tinymce.init({
     selector: '.tinyeditor',
     height: 300,
     width: 1000,
-    inline: true,
+    inline: false,
     language: 'ru',
     plugins: 'link image code',
     toolbar: 'undo redo | styleselect | fontselect fontsizeselect | bold italic underline strikethrough | link image | alignleft aligncenter alignright alignjustify | code',
