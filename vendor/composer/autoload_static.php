@@ -20,11 +20,33 @@ class ComposerStaticInit8d622746b7e3dc6950ca44909b19a895
         ),
     );
 
+    public static $classMap = array (
+        'app\\classes\\Singleton' => __DIR__ . '/../..' . '/application/classes/singleton.php',
+        'app\\classes\\User' => __DIR__ . '/../..' . '/application/classes/user.php',
+        'app\\classes\\db\\A_Db' => __DIR__ . '/../..' . '/application/classes/db/A_Db.php',
+        'app\\classes\\db\\Db' => __DIR__ . '/../..' . '/application/classes/db/Db.php',
+        'app\\classes\\db\\DbMysqli' => __DIR__ . '/../..' . '/application/classes/db/DbMysqli.php',
+        'app\\classes\\editor\\A_Editor' => __DIR__ . '/../..' . '/application/classes/editor/a_editor.php',
+        'app\\classes\\editor\\EditorTiny' => __DIR__ . '/../..' . '/application/classes/editor/editorTiny.php',
+        'app\\controllers\\Controller_404' => __DIR__ . '/../..' . '/application/controllers/controller_404.php',
+        'app\\controllers\\Controller_About' => __DIR__ . '/../..' . '/application/controllers/controller_about.php',
+        'app\\controllers\\Controller_Admin' => __DIR__ . '/../..' . '/application/controllers/controller_admin.php',
+        'app\\controllers\\Controller_Auth' => __DIR__ . '/../..' . '/application/controllers/controller_auth.php',
+        'app\\controllers\\Controller_Logout' => __DIR__ . '/../..' . '/application/controllers/controller_logout.php',
+        'app\\controllers\\Controller_Main' => __DIR__ . '/../..' . '/application/controllers/controller_main.php',
+        'app\\controllers\\Controller_Presentations' => __DIR__ . '/../..' . '/application/controllers/controller_presentations.php',
+        'app\\core\\Controller' => __DIR__ . '/../..' . '/application/core/controller.php',
+        'app\\core\\Model' => __DIR__ . '/../..' . '/application/core/Model.php',
+        'app\\core\\Route' => __DIR__ . '/../..' . '/application/core/Route.php',
+        'app\\core\\View' => __DIR__ . '/../..' . '/application/core/View.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8d622746b7e3dc6950ca44909b19a895::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8d622746b7e3dc6950ca44909b19a895::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit8d622746b7e3dc6950ca44909b19a895::$classMap;
 
         }, null, ClassLoader::class);
     }

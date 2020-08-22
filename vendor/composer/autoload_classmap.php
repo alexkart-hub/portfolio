@@ -6,4 +6,22 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'app\\classes\\Singleton' => $baseDir . '/application/classes/singleton.php',
+    'app\\classes\\User' => $baseDir . '/application/classes/user.php',
+    'app\\classes\\db\\A_Db' => $baseDir . '/application/classes/db/A_Db.php',
+    'app\\classes\\db\\Db' => $baseDir . '/application/classes/db/Db.php',
+    'app\\classes\\db\\DbMysqli' => $baseDir . '/application/classes/db/DbMysqli.php',
+    'app\\classes\\editor\\A_Editor' => $baseDir . '/application/classes/editor/a_editor.php',
+    'app\\classes\\editor\\EditorTiny' => $baseDir . '/application/classes/editor/editorTiny.php',
+    'app\\controllers\\Controller_404' => $baseDir . '/application/controllers/controller_404.php',
+    'app\\controllers\\Controller_About' => $baseDir . '/application/controllers/controller_about.php',
+    'app\\controllers\\Controller_Admin' => $baseDir . '/application/controllers/controller_admin.php',
+    'app\\controllers\\Controller_Auth' => $baseDir . '/application/controllers/controller_auth.php',
+    'app\\controllers\\Controller_Logout' => $baseDir . '/application/controllers/controller_logout.php',
+    'app\\controllers\\Controller_Main' => $baseDir . '/application/controllers/controller_main.php',
+    'app\\controllers\\Controller_Presentations' => $baseDir . '/application/controllers/controller_presentations.php',
+    'app\\core\\Controller' => $baseDir . '/application/core/controller.php',
+    'app\\core\\Model' => $baseDir . '/application/core/Model.php',
+    'app\\core\\Route' => $baseDir . '/application/core/Route.php',
+    'app\\core\\View' => $baseDir . '/application/core/View.php',
 );

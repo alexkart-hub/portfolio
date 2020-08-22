@@ -1,3 +1,4 @@
+<?= $routes[1];?>
 <!-- Start About Area -->
 <section class="about-area section-gap">
 	<div class="container">
@@ -16,7 +17,8 @@
 					<p>Хотя и не всегда это было связано с профессиональной деятельностью.
 					</p>
 				</div>
-				<a href="#" class="primary-btn white" data-text="More Info">
+				<? if(!$routes[1]) : ?>
+				<a href="/about" class="primary-btn white" data-text="More Info">
 					<span>M</span>
 					<span>o</span>
 					<span>r</span>
@@ -27,6 +29,8 @@
 					<span>f</span>
 					<span>o</span>
 				</a>
+				<? endif; ?>
+				<? if ($routes[1]) : ?>
 				<a href="#" class="primary-btn" data-text="Resume">
 					<span>R</span>
 					<span>e</span>
@@ -35,12 +39,13 @@
 					<span>m</span>
 					<span>e</span>
 				</a>
+				<? endif; ?>
 			</div>
 		</div>
 	</div>
 </section>
 <!-- End About Area -->
-
+<? if ($routes[1]) : ?>
 <!-- Start Job History Area Area -->
 <section class="job-area offwhite section-gap-top section-gap-bottom-90">
 	<div class="container">
@@ -147,3 +152,4 @@
 	</div>
 </section>
 <!-- End Job Historyt Area Area -->
+<? endif; ?>
